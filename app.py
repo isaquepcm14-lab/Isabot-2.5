@@ -3,7 +3,9 @@ import sqlite3
 import requests
 
 # ================= CONFIG =================
-OPENAI_API_KEY = "SUA_API_KEY_AQUI"
+import os
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__)
 app.secret_key = "isabot25_secret"
